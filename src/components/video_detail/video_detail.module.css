@@ -1,0 +1,15 @@
+.detail {
+  padding: 0.2em;
+  color: white;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.video{
+  display: block;
+  margin: 30px auto;
+}
+
+.titlebox{width: 80%; height: inherit; margin: 0 auto;}

@@ -1,0 +1,16 @@
+.app {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.content {
+  display: flex;
+}
+
+.detail {
+  flex: 1 1 70%;
+}
+
+.list {
+  flex: 1 1 30%;
+}
+

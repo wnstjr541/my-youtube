@@ -1,0 +1,65 @@
+.container {
+  padding: 0.1em;
+  margin-top: 30px;
+  width: 50%;
+}
+
+.container.grid {
+  width: 25%;
+}
+
+.container.list {
+  width: 70%;
+}
+
+.video {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 250ms ease-in;
+  color: aliceblue;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.video:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  width: 98%;
+  height: 180px;
+  margin-right: 5px;
+}
+
+.metadata {
+  margin-left: 0.2em;
+  display: block;
+  width: 100%;
+}
+
+.title,
+.channel {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.channel {
+  font-size: 0.6rem;
+}
+
+@media screen and (max-width: 980px) { 
+  .container.grid{
+    width: 50%;
+  }
+  .thumbnail{
+    height: 100%;
+  }
+}
+@media screen and (max-width: 780px) { 
+  .container.grid{
+    width: 100%;
+  }
+}

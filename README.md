@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+Youtube Clone Coding
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 왜 yarn을 사용했는가?
 
-## Available Scripts
+npm위에 동작하는 패키지 매니저이며 npm보다 보안, 속도 면에서 yarn이 더 우세하다는 의견이 있어서 사용했습니다.
 
-In the project directory, you can run:
+# 사용 기술
 
-### `npm start`
+Javascript <br />
+React.js <br />
+Styled-components <br />
+Youtube API <br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 기본 메인 화면
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="949" alt="main" src="https://user-images.githubusercontent.com/73412692/128296823-3d18428a-970a-41c7-97da-4d1311af92fe.png">
 
-### `npm test`
+# 검색 화면
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![chrome-capture (4)](https://user-images.githubusercontent.com/73412692/128301077-6b704b8b-d5cb-43ef-a386-8a4eb58f6ef0.gif)
 
-### `npm run build`
+# 반응형
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![chrome-capture (4)](https://user-images.githubusercontent.com/73412692/128301294-53c849a4-69d6-4004-8c71-0078d593f216.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# juntube는 아래의 기능을 제공합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Youtube API 를 호출해 실시간으로 인기 동영상 보기 <br />
+2. Youtube API 를 호출해 원하는 동영상 검색하기 <br />
+3. 홈 부분을 반응형으로 제작 <br />
 
-### `npm run eject`
+## 제작 중 힘들었던 부분
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- API통신 제한: Youtube API는 하루 최대 서버 통신량이 정해져 있습니다. 테스트를 위해 여러 번 통신 요청을 보냈고 `403 Error`를 매일 경험했습니다.
+  > 구글 플랫폼에 유튜브 할당량을 확인해 가며 조절했습니다
+- API KEY 비공개 : .env파일에 넣었음에도 github에 올릴시 api key가 노출되는 문제가 있었습니다.
+  > gitignore 파일안에 올려야 인식하지 못한다는걸 검색을 통해 알고. gitignore부분에 #API Keys .env를 작성했습니다
