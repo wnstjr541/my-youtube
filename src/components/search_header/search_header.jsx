@@ -15,25 +15,26 @@ const SearchHeader = ({ onSearch }) => {
       onSearch("");
     }
   };
-  const onHome = () => {
-    handleSearch();
-  };
 
-  const onClick = () => {
-    handleSearch();
-  };
+  const homeBack = () => {
+    window.location.href = "/";
+  }
 
   const onKeyPress = event => {
     if (event.key === 'Enter') {
       handleSearch();
     }
   };
+
+  const searchClick = () => {
+    handleSearch()
+  }
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <a onClick={onHome}><img src={Logo} alt="logo" /></a>
+      <div className={styles.logo} onClick={homeBack}>
+        <a><img src={Logo} alt="logo" /></a>
         <h1 className={styles.title}>
-          <a onClick={onHome}>Youtube</a>
+          <a>Youtube</a>
         </h1>
       </div>
       <input
@@ -43,7 +44,7 @@ const SearchHeader = ({ onSearch }) => {
         placeholder="Search..."
         onKeyPress={onKeyPress}
       />
-      <button className={styles.button} type="submit" onClick={onClick}>
+      <button className={styles.button} type="submit" onClick={searchClick}>
         <img
           className={styles.buttonImg}
           src={Search}
